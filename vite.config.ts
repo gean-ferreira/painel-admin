@@ -13,6 +13,13 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/scss/base/variables.scss"; @import "@/assets/scss/base/mixins.scss";`,
+      },
+    },
+  },
   server: {
     port: 3000,
   },
