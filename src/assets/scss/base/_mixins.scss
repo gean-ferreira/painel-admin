@@ -1,0 +1,38 @@
+@mixin responsive-prop($prop, $mobile, $desktop) {
+  #{$prop}: $mobile;
+
+  @media (min-width: map-get($breakpoints, md)) {
+    #{$prop}: calc(#{$mobile} + (#{$desktop} - #{$mobile}) / 2); // Metade
+  }
+
+  @media (min-width: map-get($breakpoints, lg)) {
+    #{$prop}: calc(((#{$mobile} + (#{$desktop} - #{$mobile}) / 2) + #{$desktop}) / 2); // Metade
+  }
+
+  @media (min-width: map-get($breakpoints, xxl)) {
+    #{$prop}: $desktop;
+  }
+}
+
+@mixin absolute-position(
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $height: auto,
+  $width: auto
+) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  height: $height;
+  width: $width;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
