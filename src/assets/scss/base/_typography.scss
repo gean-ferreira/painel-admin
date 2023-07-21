@@ -1,0 +1,23 @@
+$fonts: (
+  'bold': 'rajdhani_bold',
+  'medium': 'rajdhani_medium',
+  'regular': 'rajdhani_regular'
+);
+
+@font-face {
+  font-family: 'font-bold';
+  src: url('../fonts/rajdhani_bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'font-medium';
+  src: url('../fonts/rajdhani_medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'font-regular';
+  src: url('../fonts/rajdhani_regular.woff') format('woff');
+  font-display: swap;
+}
