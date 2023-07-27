@@ -1,0 +1,63 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-enter-active {
+  animation: fadeIn 0.3s;
+}
+
+.fade-leave-active {
+  animation: fadeOut 0.3s;
+}
+
+@keyframes fadeInLeft {
+  from {
+    position: relative;
+    left: 30px;
+    opacity: 0;
+  }
+
+  to {
+    position: relative;
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    position: relative;
+    left: 0px;
+    opacity: 1;
+  }
+
+  to {
+    position: relative;
+    left: -30px;
+    opacity: 0;
+  }
+}
+
+.fade-left-enter-active {
+  animation: fadeInLeft 0.3s;
+}
+
+.fade-left-leave-active {
+  animation: fadeOutLeft 0.3s;
+}
