@@ -33,13 +33,16 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import {useRouter} from 'vue-router';
 import EyeIcon from '@/components/icons/EyeIcon.vue'
 import Button from '@/components/Button.vue'
 
+const router = useRouter();
 const showPassword = ref(false)
 const submitForm = (values: object) => {
   console.log(values)
   alert('Login efetuado com sucesso!')
+  router.push({name: 'home'});
 }
 </script>
 
